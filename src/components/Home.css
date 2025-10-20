@@ -50,7 +50,7 @@
   background-repeat: no-repeat; 
   background-size: cover;      
   background-position: center; 
-  background-image: url('src/images/farm-bg.jpg');
+  background-image: url('public/farm-bg.jpg');
   text-align: center;
   padding: 100px 20px;
 }
@@ -58,7 +58,7 @@
 @media (max-width: 767px) {
   .hero {
     /* SWAP IMAGE FOR MOBILE SCREENS (e.g., anything 767px wide or less) */
-    background-image: url('src/images/farm-bg.jpg/farm-mobile-bg.jpg'); /* Use a portrait-friendly image */
+    background-image: url('public/farm-mobile-bg.jpg'); /* Use a portrait-friendly image */
     
     /* You may want to adjust padding or size for mobile devices */
     padding: 60px 20px;
@@ -321,4 +321,5 @@
     font-size: 0.8rem;
     color: #a0a0a0;
 }
+
 
