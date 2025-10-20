@@ -1,0 +1,83 @@
+/* 🌿 Shared Auth Page Styles (Login + Register) */
+
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #e8f5e9, #ffffff);
+}
+
+.auth-card {
+  background: #fff;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.auth-card h2 {
+  color: #1d6b2c;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  color: #777;
+  font-size: 0.9rem;
+  margin-bottom: 25px;
+}
+
+form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 1rem;
+  transition: 0.2s;
+}
+
+form input:focus {
+  border-color: #1d6b2c;
+  box-shadow: 0 0 5px rgba(29, 107, 44, 0.3);
+}
+
+.btn-primary {
+  background-color: #1d6b2c;
+  color: white;
+  border: none;
+  padding: 10px;
+  /* width: 100%; */
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #155023;
+}
+
+.error {
+  color: red;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+.auth-links {
+  margin-top: 15px;
+  font-size: 0.9rem;
+}
+
+.link {
+  color: #1d6b2c;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.link:hover {
+  text-decoration: underline;
+}

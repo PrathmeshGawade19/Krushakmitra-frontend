@@ -1,0 +1,323 @@
+/* Global Layout */
+
+.home-page {
+  font-family: "Segoe UI", sans-serif;
+  color: #333;
+  position: relative;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 15px 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-logo {
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: #1d6b2c;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  margin: 0 10px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #1d6b2c;
+}
+
+.join-btn {
+  background-color: #1d6b2c;
+  color: white !important;
+  padding: 8px 15px;
+  border-radius: 6px;
+}
+
+/* 🌾 Hero Section */
+.hero {
+  /* background: linear-gradient(135deg, #e9f8ee, #ffffff); */
+  background-repeat: no-repeat; 
+  background-size: cover;      
+  background-position: center; 
+  background-image: url('C:\Users\Prathmesh S. Gawade\Documents\Coding-Projects\farmforum\frontend\src\images\farm-bg.jpg');
+  text-align: center;
+  padding: 100px 20px;
+}
+
+@media (max-width: 767px) {
+  .hero {
+    /* SWAP IMAGE FOR MOBILE SCREENS (e.g., anything 767px wide or less) */
+    background-image: url('C:\Users\Prathmesh S. Gawade\Documents\Coding-Projects\farmforum\frontend\src\images\farm-mobile-bg.jpg'); /* Use a portrait-friendly image */
+    
+    /* You may want to adjust padding or size for mobile devices */
+    padding: 60px 20px;
+    background-position: center 30%; /* Adjust focus point if needed */
+  }
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  color: #ffffff; 
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 3px #000000; 
+}
+
+.hero-content p {
+  color: #f0f0f0; 
+  max-width: 600px;
+  margin: 0 auto 25px;
+  font-size: 1.1rem;
+  text-shadow: 1px 1px 3px #000000; 
+}
+
+.hero-buttons .btn-primary,
+.hero-buttons .btn-outline {
+  display: inline-block;
+  margin: 5px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-primary {
+  background-color: #1d6b2c;
+  color: white;
+}
+
+.btn-outline {
+  border: 2px solid #1d6b2c;
+  color: #1d6b2c;
+}
+
+.btn-outline:hover {
+  background-color: #1d6b2c;
+  color: white;
+}
+
+/* 🌱 Features Section */
+.features {
+  text-align: center;
+  padding: 80px 20px;
+  background: #f8f9fa;
+}
+
+.features h2 {
+  color: #1d6b2c;
+  margin-bottom: 40px;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.feature-card {
+  background: white;
+  border-radius: 10px;
+  padding: 25px 15px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+/* 🔥 Activity Feed */
+.activity-feed h2{
+    text-align: center;
+    color: #1d6b2c;
+}
+.activity-feed ul {
+    list-style: none;
+    padding: 0;
+    max-width: 700px;
+    margin: 30px auto; 
+    
+    background: #ffffff;
+    border-radius: 12px; 
+    
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); 
+    
+    border: 1px solid #e0e0e0;
+    overflow: hidden; 
+}
+
+.activity-feed li {
+    padding: 15px 20px;
+    margin: 0; 
+    border-bottom: 1px solid #eeeeee; 
+    border-left: 6px solid #4CAF50; 
+
+    font-size: 1rem;
+    color: #444; 
+    line-height: 1.4;
+    cursor: pointer;
+
+    transition: all 0.3s ease-in-out; 
+}
+
+.activity-feed li:hover {
+    background-color: #f8fcf8;
+    transform: translateY(-3px); 
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15); 
+    border-left-color: #388e3c; 
+}
+
+.activity-feed li:last-child {
+    border-bottom: none;
+}
+
+/* 🌍 Community Section */
+.community {
+  background: #1d6b2c;
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.community-stats {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.community-stats div {
+  text-align: center;
+}
+
+.community-stats h3 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+/* 💬 Testimonials */
+.testimonials>h2{
+  color: #1d6b2c; 
+}
+
+.testimonials{
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.testimonial-card {
+  background: #f8f9fa;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* ❓ FAQ Section */
+.faq>h2{
+  color: #1d6b2c;
+}
+.faq {
+  background: #ffffff;
+  text-align: left;
+  padding: 70px 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.faq-item {
+  margin-bottom: 20px;
+}
+
+.faq-item h4 {
+  color: #1d6b2c;
+  margin-bottom: 5px;
+}
+
+/* Footer */
+.footer {
+    background-color: #1d332d; 
+    color: #f0fff0;
+    padding-top: 20px;
+    font-size: 0.95rem;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 10px;
+    
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 30px;
+}
+
+.footer-col {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .footer-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .footer-col {
+        width: auto;
+    }
+}
+
+.footer-col h3 {
+    color: #4CAF50;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-col li {
+    margin-bottom: 10px;
+}
+
+.footer-col a {
+    color: #f0fff0;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-col a:hover {
+    color: #4CAF50;
+}
+
+.sub-footer {
+    text-align: center;
+    padding: 15px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.8rem;
+    color: #a0a0a0;
+}

@@ -1,0 +1,123 @@
+/* ----------------------------------
+ * 1. Wrapper Styles (Applied via .dashboard-wrapper)
+ * This is the unique top-level container for your component's styling.
+ * ---------------------------------- */
+.dashboard-wrapper {
+    /* Background and typography that would normally be on <body> */
+    background-color: #f0f7ed; /* Very light, warm green/off-white background */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    min-height: 100vh; /* Ensures background covers full height */
+    padding-bottom: 50px;
+}
+
+/* Styles for the main content area (Applied via .dashboard-container) */
+.dashboard-container {
+    /* max-width: 1200px; */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ----------------------------------
+ * 2. Scoped Elemental Styles
+ * All elemental selectors (h2, p) are now nested under .dashboard-container
+ * ---------------------------------- */
+
+/* Main Heading */
+.dashboard-container h2 {
+    color: #1d6b2c; /* Strong Green */
+    font-size: 2.2rem;
+    margin-top: 30px; /* Add space below the navbar */
+    border-bottom: 2px solid #e0e0e0;
+    padding-left: 30px;
+}
+
+/* Welcome Message */
+.dashboard-container p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 30px;
+    padding-left: 30px;
+}
+
+/* ----------------------------------
+ * 3. Scoped Action Links (The Main Dashboard Content)
+ * All list selectors (ul, li, a) are now nested under .dashboard-container
+ * ---------------------------------- */
+.dashboard-container ul {
+    list-style: none;
+    padding: 0;
+    
+    /* Grid layout for responsive cards */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px; /* Spacing between cards */
+    margin: 0 30px; /* Adjust margin to align with padding-left on H2/P */
+}
+
+.dashboard-container ul li {
+    background-color: #ffffff;
+    border-radius: 12px;
+    
+    /* 💥 Floating Card Effect */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+    height: 100%; /* Ensures all cards are the same height */
+}
+
+.dashboard-container ul li a {
+    display: flex; 
+    justify-content: space-between; /* Changed from center to space-between for arrow */
+    align-items: center;
+    
+    padding: 40px 20px; /* Generous padding for a large target area */
+    text-decoration: none;
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #1d6b2c; /* Theme accent color */
+    height: 100%;
+    
+    position: relative;
+}
+
+/* Add an arrow indicator to the card */
+.dashboard-container ul li a::after {
+    content: '→';
+    /* position: absolute; - Removed for flex-based alignment */
+    /* right: 20px; - Removed for flex-based alignment */
+    font-size: 1.8rem;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+    margin-left: 15px; /* Added spacing from text */
+}
+
+/* Hover Effect: Lifts the card and highlights the text/indicator */
+.dashboard-container ul li:hover {
+    transform: translateY(-8px); /* More pronounced lift */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); 
+}
+
+.dashboard-container ul li:hover a {
+    color: #4CAF50; /* Brighter green on hover */
+}
+
+.dashboard-container ul li:hover a::after {
+    opacity: 1; /* Arrow fully visible on hover */
+    color: #388e3c;
+}
+
+.logout-btn {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-left: 12px;
+  transition: 0.2s;
+}
+
+.logout-btn:hover {
+  background-color: #cc0000;
+}
